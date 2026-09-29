@@ -1,0 +1,32 @@
+{
+  "name": "bilinc",
+  "displayName": "Bilinc",
+  "version": "0.1.0",
+  "description": "Hosted memory for agents via Bilinc Cloud: write, recall, revise, forget, snapshot, diff and roll back memory across sessions.",
+  "author": {
+    "name": "ReARC Labs",
+    "email": "atakan@rearclabs.com",
+    "url": "https://rearclabs.com"
+  },
+  "homepage": "https://bilinc.space",
+  "repository": "https://github.com/atakanelik34/Bilinc",
+  "keywords": ["memory", "agent-memory", "mcp", "snapshot", "rollback"],
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "Bilinc API key",
+      "description": "Your Bilinc Cloud API key (bil_live_...). Create one in the Bilinc Cloud dashboard at https://bilinc.space.",
+      "required": true,
+      "sensitive": true
+    }
+  },
+  "mcpServers": {
+    "bilinc": {
+      "command": "uvx",
+      "args": ["--from", "bilinc", "python", "-m", "bilinc.cloud_mcp"],
+      "env": {
+        "BILINC_API_KEY": "${user_config.api_key}"
+      }
+    }
+  }
+}
