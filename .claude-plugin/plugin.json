@@ -10,7 +10,14 @@
   },
   "homepage": "https://bilinc.space",
   "repository": "https://github.com/atakanelik34/Bilinc",
-  "keywords": ["memory", "agent-memory", "mcp", "snapshot", "rollback"],
+  "license": "MIT",
+  "keywords": [
+    "memory",
+    "agent-memory",
+    "mcp",
+    "snapshot",
+    "rollback"
+  ],
   "userConfig": {
     "api_key": {
       "type": "string",
@@ -23,7 +30,13 @@
   "mcpServers": {
     "bilinc": {
       "command": "uvx",
-      "args": ["--from", "bilinc", "python", "-m", "bilinc.cloud_mcp"],
+      "args": [
+        "--from",
+        "bilinc==2.3.1",
+        "python",
+        "-m",
+        "bilinc.cloud_mcp"
+      ],
       "env": {
         "BILINC_API_KEY": "${user_config.api_key}"
       }

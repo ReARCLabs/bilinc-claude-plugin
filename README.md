@@ -30,6 +30,18 @@ Connects Claude to [Bilinc Cloud](https://bilinc.space), hosted memory for agent
 
 Install the plugin, then enter your Bilinc API key when Claude prompts for it. The key is stored in your system's secure credential store.
 
+## Data and privacy
+
+- **What it runs:** on startup, `uvx` downloads the pinned `bilinc==2.3.1` package from PyPI and runs `python -m bilinc.cloud_mcp` on your machine. The plugin has no hooks and runs nothing else.
+- **What it sends:** when Claude calls a Bilinc tool, the MCP server sends that tool's arguments (memory keys, values, metadata, snapshot and diff parameters) to the Bilinc Cloud API at `https://bilinc.space` over HTTPS, authenticated with your API key. It sends no other files or data from your machine.
+- **Where data is stored:** memory entries and snapshots are stored in your Bilinc Cloud workspace. You can delete entries with `forget`.
+- Privacy policy: https://bilinc.space/privacy
+- Terms: https://bilinc.space/terms
+
 ## Support
 
 Issues: https://github.com/atakanelik34/Bilinc/issues
+
+## License
+
+This plugin repository is MIT licensed. The `bilinc` package it runs is licensed separately under BUSL-1.1; see https://github.com/atakanelik34/Bilinc.
