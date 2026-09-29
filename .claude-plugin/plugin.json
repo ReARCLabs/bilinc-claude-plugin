@@ -9,6 +9,7 @@
     "url": "https://rearclabs.com"
   },
   "homepage": "https://bilinc.space",
+  "icon": "./.claude-plugin/icon.png",
   "repository": "https://github.com/atakanelik34/Bilinc",
   "license": "MIT",
   "keywords": [
