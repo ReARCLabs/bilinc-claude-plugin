@@ -46,7 +46,7 @@ You can disconnect at any time from **Connected apps** in the Bilinc dashboard.
 
 ## Support
 
-Issues: https://github.com/atakanelik34/Bilinc/issues
+Issues: https://github.com/ReARCLabs/bilinc/issues
 
 ## License
 

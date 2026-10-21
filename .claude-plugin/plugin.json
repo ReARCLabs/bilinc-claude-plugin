@@ -10,7 +10,7 @@
   },
   "homepage": "https://bilinc.space",
   "icon": "./.claude-plugin/icon.png",
-  "repository": "https://github.com/atakanelik34/Bilinc",
+  "repository": "https://github.com/ReARCLabs/bilinc",
   "license": "MIT",
   "keywords": [
     "memory",
